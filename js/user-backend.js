@@ -5,14 +5,15 @@ var githubRepos = function(username) {
       console.log(response);
       if (response.length > 0) {
         var description = " ";
-          $("#myRepos").append("<h1 id='repo-title'><span class='title'></span>Github Repositories</h1>");
+          $("#myRepos").append("<h1 id='userRepos'><span class='user'></span>Github Repositories</h1>");
             $.each(response, function(index) {
+              $('.image').html('<img src="'+response.avatar_url+'">');
                 var created = moment(this.created_at).format('MMMM Do YYYY, h a');
                   var updated = moment(this.updated_at).format('MMMM Do YYYY, h a');
       if (this.description !== null) {
           description = this.description;
               }
-        $("#myRepos").append("<div class='col-md-12'>" + "<h1><a href='" + this.url + "'><span class='title'></span> " + this.name + "</a></h1>" + "<div class='col-md-12'>" + "<p>Created: " + created + "</p>" + "<p>Updated: " + updated + "</p>" + "</div>" + "<div class='col-md-12'>" + "<p>" + description + "</p>" + "</div>" +
+        $("#myRepos").append("<div>" + "<h1><a href='" + this.url + "'><span class='title'></span> " + this.name + "</a></h1>" + "<div>" + "<p>Created: " + created + "</p>" + "<p>Updated: " + updated + "</p>" + "</div>" + "<div class='col-md-12'>" + "<p>" + description + "</p>" + "</div>" +
                                 "</div>");
                 })
           }

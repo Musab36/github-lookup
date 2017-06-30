@@ -86,16 +86,15 @@ gulp.task('bower', ['bowerJSS', 'bowerCSS']);
 // Server begins here
 // Server task
 gulp.task('server', function() {
-  browserSync.init({ // browserSync initialized and launches the local server
+  browserSync.init({
      server: {
-       baseDir: "./", // The directory where the local server will be launched from
-       index: "index.html" // The entry point where we want to start our app
+       baseDir: "./",
+       index: "index.html"
      }
   });
   gulp.watch(['js/*.js'], ['jsBuild']); // We are watching the js files and if they change, jsBuild is run
   gulp.watch(['bower.json'], ['bowerBuild']); // Bower files are watched for changes
   gulp.watch(['*.html'], ['htmlBuild']); // Watches html pages for changes
-  gulp.watch(['./scss*.scss'], ['cssBuild']); // A watcher for changes in scss files
 });
 
 // jsBuild task with an array of dependency tasks that need to be run whenever any of the js files change.
