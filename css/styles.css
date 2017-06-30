@@ -1,0 +1,50 @@
+#myContainer {
+  height: 1000px;
+}
+body {
+  background-color: rgb(9, 31, 50);
+}
+#userForm {
+  margin-top: 200px;
+  text-align: center;
+}
+#mybtn {
+  margin-top: 20px;
+  height: 50px;
+  width: 150px;
+  color: white;
+  background-color: red;
+  border: 3px solid red;
+  border-radius: 5px;
+}
+#mybtn:hover,
+        focus {
+  background-color: white;
+  color: black;
+}
+#myInput {
+  width: 400px;
+  border-radius: 10px;
+}
+.well {
+  height: 700px;
+  width: 500px;
+  background-color: #333;
+  margin-left: 300px;
+  margin-top: 100px;
+  box-shadow: 0px 3px 3px 3px white;
+}
+
+label {
+  color: white;
+  font-family: monospace;
+  font-weight: bold;
+}
+p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+#myResult {
+  color: white;
+}
