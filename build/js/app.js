@@ -44,11 +44,13 @@ $(document).ready(function() {
     $("#mybtn").fadeOut();
     $(".well").fadeOut();
     $("#back").fadeIn();
+    $("#pp").fadeIn();
   });
   $("#back").click(function() {
     $("#back").fadeOut();
     $("#myResults").fadeOut();
-    $(".well").fadeIn();
+    $(".profile").fadeOut();
+    $(".well").show();
     $("#mybtn").fadeIn();
     $(".marqs1").show();
     $(".marqs2").show();
