@@ -1,3 +1,7 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+exports.apiKey = 'c8f89bd44061119148005f1d6103393fa3a9e417';
+
+},{}],2:[function(require,module,exports){
 var key = require('./../.env').apiKey; // We are exporting the apiKey from .env file
 var githubRepos = function(username) { // Repos function
   // We are loading data from github when a user enters a username
@@ -30,3 +34,21 @@ $("#myRepos").html(" "); //
                 )};
 
  exports.reposModule = githubRepos;
+
+},{"./../.env":1}],3:[function(require,module,exports){
+var githubRepos = require('./../js/user-backend.js').reposModule;
+
+$(document).ready(function() {
+  $("#myResults").hide();
+  $("#userForm").submit(function(event) {
+    event.preventDefault();
+    var username = $("#myInput").val();
+    $("#myResults").hide(function() {
+      githubRepos(username).then(function() {
+        $("#myResults").show();
+      });
+    });
+  });
+});
+
+},{"./../js/user-backend.js":2}]},{},[3]);
