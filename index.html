@@ -7,29 +7,35 @@
     <script src="bower_components/min/moment.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script type="text/javascript" src="build/js/app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Github user search engine</title>
   </head>
 
   <body>
     <div class="container" id="myContainer">
+      <button id="back"><i class="fa fa-arrow-left"> Go back</i></button>
       <div class="well well-sm">
-        <marquee direction="up" scrollamount="13" scrolldelay="1000" behavior="scroll">
-          <p>You can search any Github username.</p>
-          <p>Just type down your the username you want below.</p>
-          <p>Then click submit.</p>
-          <p>You should be able to see the person's public Github repositories!</p>
-        </marquee>
+        <div class="marqs1">
+          <marquee direction="up" scrollamount="13" scrolldelay="1000" behavior="scroll">
+            <p>You can search any Github username.</p>
+            <p>Just type down your the username you want below.</p>
+            <p>Then click submit.</p>
+            <p>You should be able to see the person's public Github repositories!</p>
+          </marquee>
+        </div>
         <form id="userForm">
           <div class="form-group">
             <label for="user">Enter your Github username</label><br>
             <input type="text" id="myInput" placeholder="Search your username here" required><br>
             <button type="submit" id="mybtn">Submit</button>
           </div>
-          <marquee direction="down" scrollamount="13" scrolldelay="1000" behavior="scroll">
-            <p>Created by: Musab Abdirahman</p>
-            <p>Hope you enjoyed!</p>
-            <p>Thank you for using my app!</p>
-          </marquee>
+          <div class="marqs2">
+            <marquee direction="down" scrollamount="13" scrolldelay="1000" behavior="scroll">
+              <p>Created by: Musab Abdirahman</p>
+              <p>Hope you enjoyed!</p>
+              <p>Thank you for using my app!</p>
+            </marquee>
+          </div>
         </form>
 
       </div>
