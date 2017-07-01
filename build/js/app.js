@@ -20,7 +20,7 @@ $("#myRepos").html(" "); // We are getting the content in the id myRepos and set
         $("#myRepos").append("<div>" + "<h1><a href='" + this.url + "'><span class='title'></span> " + this.name + "</a></h1>" + "<div>" + "<p>Created: " + created + "</p>" + "<p>Updated: " + updated + "</p>" + "</div>" + "<div class='col-md-12'>" + "<p>" + description + "</p>" + "</div>" +
                                 "</div>");
                 })
-        $('.image').html('<img src="'+response[0].owner.avatar_url+'">');
+        $('.profile-picture').html('<img src="'+response[0].owner.avatar_url+'">');
           }
                else {
          // We are getting all the contents that are within the user id
