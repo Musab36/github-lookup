@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("#mybtn").fadeOut();
     $(".well").fadeOut();
     $("#back").fadeIn();
-    $("#pp").fadeIn();
+    $("#pp").show();
   });
   $("#back").click(function() {
     $("#back").fadeOut();
